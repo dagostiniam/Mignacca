@@ -21,12 +21,6 @@ export default function PrivacidadePage() {
 
       <Section tone="default">
         <div className="prose-content mx-auto max-w-2xl space-y-6 text-sm leading-relaxed text-text">
-          <p className="rounded-md bg-surface p-4 text-xs text-text-muted">
-            [Texto modelo — deve ser revisado por um profissional jurídico
-            antes da publicação, para refletir com precisão as práticas reais
-            de tratamento de dados da {company.name}.]
-          </p>
-
           <p>
             A {company.name} respeita a privacidade dos visitantes deste site
             e trata os dados pessoais coletados em conformidade com a Lei
