@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { Suspense } from "react";
 import { PageHeader } from "@/components/PageHeader";
 import { ArticlesCatalog } from "@/components/blog/ArticlesCatalog";
 import { pageMetadata } from "@/lib/metadata";
@@ -19,7 +20,9 @@ export default function ConteudosPage() {
         description="Artigos para ajudar você a entender melhor a contabilidade, os impostos e a gestão financeira da sua empresa."
         breadcrumb={[{ label: "Início", href: "/" }, { label: "Conteúdos" }]}
       />
-      <ArticlesCatalog />
+      <Suspense>
+        <ArticlesCatalog />
+      </Suspense>
     </>
   );
 }
