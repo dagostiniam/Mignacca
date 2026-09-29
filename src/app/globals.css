@@ -1,0 +1,81 @@
+@import "tailwindcss";
+
+@theme {
+  /* Brand — derived from the Mignacca visual identity (navy + gold) */
+  --color-primary: #0e1b36; /* deep navy — wordmark, primary CTAs */
+  --color-primary-dark: #081123;
+  --color-primary-light: #1e3a66;
+  --color-secondary: #142645; /* secondary navy panels */
+  --color-accent: #b8935a; /* antique gold — the diagonal stroke in the M */
+  --color-accent-dark: #8f6e3d;
+  --color-accent-light: #d9bd8a;
+
+  --color-background: #ffffff;
+  --color-surface: #f8f5ee; /* warm ivory, not gray — keeps the premium/paper feel */
+  --color-surface-alt: #f1ebdd;
+  --color-text: #14213d; /* near-navy ink instead of pure black */
+  --color-text-muted: #5b6478;
+  --color-text-on-primary: #f8f5ee;
+  --color-border: #e6e1d2;
+  --color-border-strong: #cfc7ae;
+
+  --font-display: var(--font-playfair), Georgia, "Times New Roman", serif;
+  --font-sans: var(--font-inter), -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+
+  --radius-sm: 0.375rem;
+  --radius-md: 0.625rem;
+  --radius-lg: 1rem;
+  --radius-xl: 1.5rem;
+
+  --shadow-soft: 0 1px 2px 0 rgb(14 27 54 / 0.04), 0 8px 24px -8px rgb(14 27 54 / 0.12);
+  --shadow-lifted: 0 4px 8px -2px rgb(14 27 54 / 0.08), 0 16px 40px -12px rgb(14 27 54 / 0.18);
+
+  --animate-fade-up: fade-up 0.6s ease-out both;
+
+  @keyframes fade-up {
+    from {
+      opacity: 0;
+      transform: translateY(12px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+}
+
+body {
+  background: var(--color-background);
+  color: var(--color-text);
+  font-family: var(--font-sans);
+}
+
+::selection {
+  background: var(--color-accent-light);
+  color: var(--color-primary-dark);
+}
+
+:focus-visible {
+  outline: 2px solid var(--color-accent);
+  outline-offset: 2px;
+  border-radius: 2px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+.reveal {
+  animation: var(--animate-fade-up);
+}
+
+.balance {
+  text-wrap: balance;
+}

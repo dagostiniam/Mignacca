@@ -1,0 +1,14 @@
+mark.png -> já adicionado (extraído do cabeçalho fornecido). Usado no
+header do site ao lado do wordmark "MIGNACCA".
+
+Ainda seria útil, se possível conseguir com quem criou a logo:
+
+- Uma versão do símbolo "M" em BRANCO/dourado (para uso sobre fundo navy —
+  o cartão de visita mostra essa versão, mas só temos ela junto com o
+  fundo navy sólido e o restante do layout do cartão, não isolada). Sem
+  isso, o footer do site usa só o texto "MIGNACCA", sem o símbolo, para
+  evitar o "M" navy ficar invisível sobre o fundo navy do rodapé.
+- Um arquivo vetorial (SVG/AI/EPS) do símbolo, para nitidez perfeita em
+  qualquer tamanho — o mark.png atual foi recortado de uma imagem
+  relativamente pequena (589x196px), então funciona bem em tamanhos de
+  header/footer mas pode ficar um pouco suave se usado muito ampliado.
