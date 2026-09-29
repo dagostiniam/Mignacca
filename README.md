@@ -1,36 +1,32 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Mignacca site
 
-## Getting Started
+Site institucional da Mignacca em Next.js.
 
-First, run the development server:
+## O que mudou
+
+- o único código de backend do projeto era um Server Action para enviar o formulário de contato por e-mail via Resend
+- esse formulário já estava desativado na página de contato, então o backend não era necessário para o site atual
+- o projeto agora está configurado como frontend-only com exportação estática para hospedagem no GitHub Pages
+
+## Desenvolvimento
 
 ```bash
+npm ci
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Build estático
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+```bash
+npm run build
+```
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+O build gera a versão estática em `out/`.
 
-## Learn More
+## GitHub Pages
 
-To learn more about Next.js, take a look at the following resources:
+- `next.config.ts` usa `output: "export"` para gerar arquivos estáticos
+- `trailingSlash: true` evita depender de rewrites no host
+- `public/.nojekyll` garante que a pasta `_next/` seja publicada corretamente no GitHub Pages
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+Se no futuro o formulário de contato por e-mail voltar a ser necessário, será preciso reintroduzir algum serviço externo ou backend para processar o envio.

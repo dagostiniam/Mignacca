@@ -1,24 +1,10 @@
 import type { Metadata } from "next";
-import { Playfair_Display, Inter } from "next/font/google";
 import "./globals.css";
 import { Header } from "@/components/layout/Header";
 import { Footer } from "@/components/layout/Footer";
 import { WhatsAppButton } from "@/components/whatsapp/WhatsAppButton";
 import { JsonLd } from "@/components/seo/JsonLd";
 import { company, siteUrl } from "@/data/company";
-
-const playfair = Playfair_Display({
-  variable: "--font-playfair",
-  subsets: ["latin"],
-  weight: ["600", "700"],
-  display: "swap",
-});
-
-const inter = Inter({
-  variable: "--font-inter",
-  subsets: ["latin"],
-  display: "swap",
-});
 
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
@@ -55,10 +41,7 @@ const organizationJsonLd = {
 
 export default function RootLayout({ children }: LayoutProps<"/">) {
   return (
-    <html
-      lang="pt-BR"
-      className={`${playfair.variable} ${inter.variable} h-full antialiased`}
-    >
+    <html lang="pt-BR" className="h-full antialiased">
       <body className="flex min-h-full flex-col bg-background text-text">
         <JsonLd data={organizationJsonLd} />
         <a
