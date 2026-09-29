@@ -3,6 +3,8 @@ import { siteUrl } from "@/data/company";
 import { services } from "@/data/services";
 import { articles } from "@/data/articles";
 
+export const dynamic = "force-static";
+
 export default function sitemap(): MetadataRoute.Sitemap {
   const staticRoutes: MetadataRoute.Sitemap = [
     { url: `${siteUrl}/`, changeFrequency: "weekly", priority: 1 },
