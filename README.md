@@ -30,4 +30,23 @@ O build gera a versão estática em `out/`.
 - `BASE_PATH` pode ser definido no build para publicar em subdiretórios (ex.: `BASE_PATH=/Mignacca` no URL padrão do GitHub Pages)
 - `public/.nojekyll` garante que a pasta `_next/` seja publicada corretamente no GitHub Pages
 
+### Deploy automático
+
+O repositório inclui o workflow `/home/runner/work/Mignacca/Mignacca/.github/workflows/deploy-pages.yml`, que publica o conteúdo de `out/` no GitHub Pages a cada push na branch `main`.
+
+Para ativar:
+
+1. No GitHub, abra **Settings → Pages**
+2. Em **Source**, selecione **GitHub Actions**
+3. Faça push para `main`
+
+### Base path
+
+- URL padrão do GitHub Pages (`https://dagostiniam.github.io/Mignacca/`): mantenha `BASE_PATH: /Mignacca` no workflow
+- domínio customizado (`https://www.mignacca.com.br`): altere o `BASE_PATH` do workflow para vazio antes de publicar
+
+Se a branch principal do repositório mudar de nome, atualize também o gatilho `on.push.branches` do workflow.
+
+Como o site é frontend-only, reintroduzir Server Actions, route handlers dependentes de request ou outros recursos que exijam backend quebrará o deploy estático no GitHub Pages.
+
 Se no futuro o formulário de contato por e-mail voltar a ser necessário, será preciso reintroduzir algum serviço externo ou backend para processar o envio.
