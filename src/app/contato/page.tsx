@@ -2,10 +2,6 @@ import type { Metadata } from "next";
 import { PageHeader } from "@/components/PageHeader";
 import { Section } from "@/components/ui/Section";
 import { Button } from "@/components/ui/Button";
-// Formulário de contato desativado até termos um serviço de e-mail
-// configurado (ver src/app/contato/actions.ts). Para reativar: importe
-// ContactForm de "@/components/forms/ContactForm" e volte a renderizá-lo
-// no lugar do card "Fale agora" abaixo.
 import {
   MailIcon,
   PhoneIcon,
