@@ -69,7 +69,4 @@ export function resolveText(value: string | Placeholder): string {
   return typeof value === "string" ? value : value.value;
 }
 
-// PLACEHOLDER — not yet confirmed with the client. Update once the real
-// production domain is known; it feeds metadataBase, canonical URLs,
-// Open Graph tags, sitemap.xml and robots.txt.
-export const siteUrl = "https://www.mignacca.com.br";
+export const siteUrl = "https://www.mignaccacontabilidade.com.br";

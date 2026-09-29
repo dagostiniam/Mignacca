@@ -43,7 +43,7 @@ Para ativar:
 ### Base path
 
 - URL padrão do GitHub Pages (`https://dagostiniam.github.io/Mignacca/`): mantenha `BASE_PATH: /Mignacca` no workflow
-- domínio customizado (`https://www.mignacca.com.br`): altere o `BASE_PATH` do workflow para vazio antes de publicar
+- domínio customizado (`https://www.mignaccacontabilidade.com.br`): deixe `BASE_PATH` vazio, como no workflow atual
 
 Se a branch principal do repositório mudar de nome, atualize também o gatilho `on.push.branches` do workflow.
 
