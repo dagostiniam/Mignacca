@@ -27,6 +27,7 @@ O build gera a versão estática em `out/`.
 
 - `next.config.ts` usa `output: "export"` para gerar arquivos estáticos
 - `trailingSlash: true` evita depender de rewrites no host
+- `BASE_PATH` pode ser definido no build para publicar em subdiretórios (ex.: `BASE_PATH=/Mignacca` no URL padrão do GitHub Pages)
 - `public/.nojekyll` garante que a pasta `_next/` seja publicada corretamente no GitHub Pages
 
 Se no futuro o formulário de contato por e-mail voltar a ser necessário, será preciso reintroduzir algum serviço externo ou backend para processar o envio.
